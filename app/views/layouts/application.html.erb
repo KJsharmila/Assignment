@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+</head>
+<body class="landing-page-bg">
+	<%= render partial: 'layouts/common/header'  %>
+	<div id="div_flash_message" class="container">
+    <%= render :partial=>"/layouts/common/flash_messages" -%>
+  </div>
+  <%= yield %>
+  <div id="popup_modal" class="modal fade"></div>
+  <div id="stack2" class="modal fade"></div>
+
+</body>
+</html>
